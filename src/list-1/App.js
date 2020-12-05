@@ -5,22 +5,22 @@ class App extends Component {
   state = {
     data: {
       family: {
-        title: '家人',
+        title: 'family',
         list: [
-          {name: '爸爸'},
-          {name: '妈妈'}
+          {name: 'father'},
+          {name: 'mother'}
         ]
       },
       friend: {
-        title: '朋友',
+        title: 'friend',
         list: [
-          {name: '张三'},
-          {name: '李四'},
-          {name: '王五'}
+          {name: 'joey'},
+          {name: 'amy'},
+          {name: 'rose'}
         ]
       },
       customer: {
-        title: '客户',
+        title: 'client',
         list: [
           {name: 'aaaa'},
           {name: 'bbbb'}
