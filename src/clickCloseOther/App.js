@@ -3,6 +3,7 @@ import './index.css';
 import List from './list';
 class App extends Component {
   state = {
+    openChild:'family',
     data: {
       family: {
         title: 'family',
@@ -28,12 +29,23 @@ class App extends Component {
       }
     }
   }
+  setOpen=(openChild)=>{
+    this.setState({
+      openChild
+    });
+  }
   render() {
-    let {data} = this.state;
+    let {data,openChild} = this.state;
     return  ( <div className='friend-list'>
-      <div>click to open</div>
+      <div>click to open(close others)</div>
         {Object.keys(data).map((item)=>{
-          return <List data={data[item]} key={item} />
+          return <List 
+            data={data[item]} 
+            key={item} 
+            isOpen={openChild===item}
+            name={item}
+            setOpen={this.setOpen}
+            />
         })}
       </div>
     )
