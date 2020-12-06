@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './list-1/App';
 import App2 from './clickCloseOther/App';
+import Todos from './TodoList/App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <App2 />
+    <Todos />
   </React.StrictMode>,
   document.getElementById('root')
 );
